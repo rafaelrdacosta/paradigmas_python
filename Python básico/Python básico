@@ -1,0 +1,42 @@
+1. Instalando o Python
+    a. Instalação pelo site oficial
+        - python.org aba dowloads
+        - marcar a opção "Add Python to PATH" -> abilita uso no terminal
+
+    b. Instalação pelo site anaconda
+        - anaconda.com aba dowloads
+
+    c. Instalação da IDE PyCharm
+        - versão: PyCharm Community Edition
+        - site Jet Brains
+
+2. Principais características
+    a. Sintaxe simples e legível
+    b. Tipagem dinâmica
+    c. Vasta biblioteca padrão
+    d. Suporte a múltiplos paradigmas de programação
+
+    - Em python os blocos são definidos por ':' e identação.
+    - Comentários: # uma linha
+                   ''' várias linhas '''
+    - PEP (Python Enhancement Proposals) - lista de propostas de melhorias
+    -> PEP8: é um guia de estilo de programação (python.org)
+        a) Identação - 4 espaços para identação
+        b) limite todas as linhas a um máximo de 79 caracteres
+        c) o limite para comentários e docstrings é de 72 caracteres
+        d) não deve haver a quebra de linha após operadores binários (+, -, *, /)
+        e) funções e classes devem ser envolvidas com duas linhas em branco
+        f) definições de métodos dentro de uma classe são delimitados por uma linha em branco
+        g) pode ser usado linhas em branco dentro de funções para separar seções lógicas.
+        h) as importações geralmente devem estar em linhas separadas.
+        i) as importações são colocadas depois de comentários do módulo e antes de variáveis globais e constantes
+        j) importações devem seguir esta ordem: biblioteca padrão, bibliotecas de terceiros e locais.
+        k) pode ser colocado uma linha em branco entre os grupos de importações.
+        l) em Python aspas simples e duplas são iguais.
+        m) evite espaços em brancos desnecessários em expressões.
+        n) evite espaços em branco ao final de linhas.
+        o) os comentários devem ser sentenças completas inicidadas com letras maiúsculas.
+        p) cada linha de um comentário de bloco é iniciada com # e um espaço simples.
+        q) os parágrafos dentro do bloco são separados com uma linha com o #.
+        r) Escreva docstrings para todos os módulos, funções, classes e métodos públicos.
+        s) PEP 257 descreve boas práticas para docstrings.
