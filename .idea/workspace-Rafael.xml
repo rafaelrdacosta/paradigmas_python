@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6d168779-d37b-4093-a14d-5546a7621f1b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Python básico/ex008.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python básico/ex009.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python básico/ex010.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python básico/ex011.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python básico/ex012.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python básico/ex013.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python básico/ex014.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python básico/ex015.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python básico/ex016.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python básico/ex017.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python básico/ex018.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python básico/Python básico" beforeDir="false" afterPath="$PROJECT_DIR$/Python básico/Python básico" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="36P4RRIO4WD3ddUdkgOy70nNpxe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.ex001.executor": "Run",
+    "Python.ex002.executor": "Run",
+    "Python.ex003.executor": "Run",
+    "Python.ex004.executor": "Run",
+    "Python.ex005.executor": "Run",
+    "Python.ex006.executor": "Run",
+    "Python.ex007.executor": "Run",
+    "Python.ex008.executor": "Run",
+    "Python.ex009.executor": "Run",
+    "Python.ex010.executor": "Run",
+    "Python.ex011.executor": "Run",
+    "Python.ex012.executor": "Run",
+    "Python.ex013.executor": "Run",
+    "Python.ex014.executor": "Run",
+    "Python.ex015.executor": "Run",
+    "Python.ex016.executor": "Run",
+    "Python.ex017.executor": "Run",
+    "Python.ex018.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d168779-d37b-4093-a14d-5546a7621f1b" name="Changes" comment="" />
+      <created>1764894864226</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764894864226</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -21,22 +21,143 @@
                    ''' várias linhas '''
     - PEP (Python Enhancement Proposals) - lista de propostas de melhorias
     -> PEP8: é um guia de estilo de programação (python.org)
-        a) Identação - 4 espaços para identação
-        b) limite todas as linhas a um máximo de 79 caracteres
-        c) o limite para comentários e docstrings é de 72 caracteres
-        d) não deve haver a quebra de linha após operadores binários (+, -, *, /)
-        e) funções e classes devem ser envolvidas com duas linhas em branco
-        f) definições de métodos dentro de uma classe são delimitados por uma linha em branco
-        g) pode ser usado linhas em branco dentro de funções para separar seções lógicas.
-        h) as importações geralmente devem estar em linhas separadas.
-        i) as importações são colocadas depois de comentários do módulo e antes de variáveis globais e constantes
-        j) importações devem seguir esta ordem: biblioteca padrão, bibliotecas de terceiros e locais.
-        k) pode ser colocado uma linha em branco entre os grupos de importações.
-        l) em Python aspas simples e duplas são iguais.
-        m) evite espaços em brancos desnecessários em expressões.
-        n) evite espaços em branco ao final de linhas.
-        o) os comentários devem ser sentenças completas inicidadas com letras maiúsculas.
-        p) cada linha de um comentário de bloco é iniciada com # e um espaço simples.
-        q) os parágrafos dentro do bloco são separados com uma linha com o #.
-        r) Escreva docstrings para todos os módulos, funções, classes e métodos públicos.
-        s) PEP 257 descreve boas práticas para docstrings.
+       O PEP 8 estabelece as convenções de código para garantir que o código Python seja limpo, legível e consistente.
+
+        LAYOUT E ESTRUTURA DO CÓDIGO
+
+        1.1. Comprimento da Linha
+
+        Máximo: 79 caracteres por linha (regra rígida).
+        Uso: Use quebras de linha implícitas (dentro de parênteses, colchetes ou chaves) para continuar o código.
+
+        1.2. Identação
+
+        Padrão: 4 espaços por nível de identação.
+        Proibido: Nunca use tabulações.
+
+        1.3. Linhas em Branco
+
+        Duas Linhas: Separe classes e funções de nível superior.
+        Uma Linha: Separe métodos dentro de uma classe, ou blocos lógicos dentro de uma função.
+
+        1.4. Quebras de Linha
+
+        Alinhamento: A linha de continuação deve ser alinhada verticalmente com o parêntese de abertura.
+
+        NOMENCLATURA (CONVENÇÕES DE NOMES)
+
+        2.1. Módulos/Arquivos
+
+        Estilo: Minúsculas com sublinhados (lowercase_with_underscores).
+        Exemplo: calculadora_de_impostos.py
+
+        2.2. Classes
+
+        Estilo: CamelCase com a primeira letra maiúscula (CapWords).
+        Exemplo: MinhaClasseDeDados, PedidoCliente
+
+        2.3. Funções e Variáveis
+
+        Estilo: Minúsculas com sublinhados (lowercase_with_underscores).
+        Exemplo: calcular_total(), nome_completo
+
+        2.4. Constantes
+
+        Estilo: Maiúsculas com sublinhados (ALL_CAPS_WITH_UNDERSCORES).
+        Exemplo: MAX_CONEXOES, TAXA_FIXA
+
+        2.5. Elementos "Privados" (Sugerido)
+
+        Estilo: Prefixar com um único sublinhado.
+        Exemplo: _metodo_interno, _dados_cache
+
+        USO DE ESPAÇOS EM BRANCO (WHITESPACE)
+
+        3.1. Operadores Binários
+
+        Regra: Use um único espaço em ambos os lados de operadores (=, +, ==, -, *, /, etc.).
+        Correto: x = y + 5
+        Incorreto: x=y+5
+
+        3.2. Vírgulas e Dois Pontos
+
+        Regra: Sem espaço antes, um espaço depois.
+        Correto: a, b = 1, 2
+        Incorreto: a , b = 1 , 2
+
+        3.3. Argumentos de Função
+
+        Regra: Não use espaço antes do parêntese e nem dentro dele.
+        Correto: funcao(arg1, arg2)
+        Incorreto: funcao ( arg1, arg2 )
+
+        3.4. Indexação e Fatiamento
+
+        Regra: Não use espaço interno em colchetes.
+        Correto: lista[indice]
+        Incorreto: lista[ indice ]
+
+        IMPORTAÇÕES
+
+        4.1. Localização:
+
+        Importações devem estar no início do arquivo, logo após a docstring do módulo.
+
+        4.2. Organização e Agrupamento (em ordem, separados por linha em branco):
+
+        Módulos padrão da biblioteca Python (ex: os, sys).
+        Módulos de terceiros (ex: requests, numpy).
+        Módulos locais/do seu projeto.
+
+        4.3. Estilo:
+
+        Use uma linha separada para cada importação.
+        Evite from modulo import *.
+
+        OUTRAS BOAS PRÁTICAS
+
+        5.1. Comparação com None
+
+        Regra: Use is ou is not.
+        Correto: if nome is not None:
+        Incorreto: if nome != None:
+
+        5.2. Verificação de Coleções Vazias
+
+        Regra: Use a avaliação booleana do Python (objetos vazios são Falsy).
+        Correto: if not minha_lista:
+        Incorreto: if len(minha_lista) == 0:
+
+        5.3. Docstrings
+
+        Uso: Use aspas triplas ("""Docstring""") para documentar módulos, classes e funções/métodos.
+
+3. Variáveis em Python
+
+    a. Nomes das variáveis
+    - Não é necessário declarar uma variável antes de usá-la mas ele deve receber alguma atribuiação anterior.
+    - Pode se utilizar: letras, underline(_) e números.
+    - Os nomes são case sensitive.
+    - Não pode iniciar com número.
+    - Não pode utilizar palavras reservadas.
+
+    b. Amarração - binding
+    - processo de associar um nome a um objeto.
+    - quando cria uma variável e atribui um valor a ela, você está amarrando esse valor à variável.
+    - amarrações de tipo referem-se ao tipo de dado que uma variável pode armazenar.
+
+    c. Escopo e tempo de vida
+    - escopo: parte do código onde uma variável é visível e pode ser acessada.
+    - local e global
+    - tempo de vida: período em que a variável existe na memória - depende do escopo.
+    - ordem para procura de uma variável no programa:
+        a chamada função delimitadora
+        as variáveis globais
+        o módulo builtins
+    - dentro da função pode-se utilizar a palabra reservada global (Ex: global num).
+    - a Python tem escopo para as variáveis dinâmico.
+
+    d. Constantes
+    - Em Python não existe um tipo de dado específico para constantes.
+    - Por convenção utiliza-se variáveis com nomes em letras maiúsculas para indicar que são constantes.
+    - criar uma constante verdadeiramente imutável, você pode usar a biblioteca constant ou o decorador @final do módulo typing.
