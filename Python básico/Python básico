@@ -161,3 +161,5 @@
     - Em Python não existe um tipo de dado específico para constantes.
     - Por convenção utiliza-se variáveis com nomes em letras maiúsculas para indicar que são constantes.
     - criar uma constante verdadeiramente imutável, você pode usar a biblioteca constant ou o decorador @final do módulo typing.
+
+4. Tipos de dados e expressões
