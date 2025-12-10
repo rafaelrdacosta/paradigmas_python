@@ -193,3 +193,19 @@
     f. diferente !=
 
     - Operadores and, or e not
+
+5. Precedência entre operadores
+    - Operadores matemáticos: (), **, (*, /, %),e (+, -)
+    Operador 	                            Descrição
+    [expressões ...] 	                    Definição de lista
+    x[ ], x[índice : índice] 	            Operador de indexação
+    ** 	                                    Exponenciação
+    +x, -x 	                                Sinal de positivo e negativo
+    *, /, //, % 	                        Produto, divisão, divisão inteira, resto
+    +, - 	                                Soma, subtração
+    in, not in, <, <=,>, >=, <>, !=, == 	Comparações, inclusive a ocorrência em listas
+    not x 	                                Booleano NOT (não)
+    and 	                                Booleano AND (e)
+    or 	                                    Booleano OR (ou)
+
+6. Conversões de tipos de dados
