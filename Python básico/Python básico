@@ -161,3 +161,46 @@
     - Em Python não existe um tipo de dado específico para constantes.
     - Por convenção utiliza-se variáveis com nomes em letras maiúsculas para indicar que são constantes.
     - criar uma constante verdadeiramente imutável, você pode usar a biblioteca constant ou o decorador @final do módulo typing.
+
+4. Tipos de dados e expressões
+
+    - numéricos: inteiros (int), flutuantes (float) e complexos.
+    - booleanos: verdadeiro (True) e falso (False)
+    - Sequências: string (str), listas (list), tuplas (tuple)
+    - Conjuntos: conjuntos (set)
+    - Mapeamentos: dicionários (dict)
+    - Classes, instâncias e exceções também são tipos padrão.
+
+    - Em expressões algébricas, sempre que somamos, subtraímos ou multiplicamos apenas elementos do tipo int, o resultado é int.
+    Porém, basta um operando do tipo float para que o resultado seja float.
+
+    - Operadores matemáticos
+    a. Soma +
+    b. Subtração -
+    c. Multiplicação *
+    d. Divisão /
+    e. Divisão inteira //
+    f. Resto da divisão inteira %
+    g. Exponenciação **
+    h. Valor absoluto abs(parâmetro) -> abs(-2.5) == 2.5
+
+    - Operadores de comparação -> tem como resultado True ou False
+    a. menor que <
+    b. maior que >
+    c. menor ou igual <=
+    d. maior ou igual >=
+    e. igual ==
+    f. diferente !=
+
+    - Operadores and, or e not
+
+  5. Relação de Precedência entre operadores
+    - Parênteses ()
+    - Exponenciação **
+    - Sinal positivo e negativo +x, -x
+    - Multiplicação * - Divisão / - Divisão inteira // - Módulo %
+    - Adição e Subtração
+    - in, not in, <, <=, >, >=, <>, !=, ==
+    - not x
+    - and
+    - or
