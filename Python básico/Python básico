@@ -204,3 +204,6 @@
     - not x
     - and
     - or
+
+  6. Conversões de tipos de dados
+  
