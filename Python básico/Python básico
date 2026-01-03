@@ -206,4 +206,10 @@
     - or
 
   6. Conversões de tipos de dados
-  
+    As funções de conversão:
+    - int(): para inteiro
+    - float(): para ponto flutuante
+    - str(): para string
+    - bool(): para booleano
+
+  7. Variáveis - formas de atribuição
