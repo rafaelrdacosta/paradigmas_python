@@ -213,3 +213,71 @@
     - bool(): para booleano
 
   7. Variáveis - formas de atribuição
+    - Atribuição direta (simples)
+    a = 10
+    b = 20
+
+    - Atribuição múltipla
+     x, y, z = 1, 2, 3
+
+    - Troca de valores entre variáveis
+     a, b = b, a
+
+    - Operadores de atribuição composta
+    x = 10
+    x = x + 1
+    ou
+    x += 1    #saída 11
+
+        mais igual +=
+        menos igual -=
+        divdio igual /=
+        módulo igual %=
+
+    8. Programação Python
+    - Saída de dados: função print()
+        Ex: print('Hello World)'
+        num = 10
+        print(num)
+
+    - Entrada de dados: função input()
+        Toda entrada será tratada como string
+        Ex: nome = input('Entre com seu nome:')
+        print(nome)
+
+    - A função eval()
+    Recebe uma string mas trata como um valor numérico
+    Realiza a operação algébrica da expressão.
+    Exemplo:
+    s = '1 + 2'
+    x = eval(s)
+    print(x)   #saída 3
+
+    num = eval(input('Entre com um nr:')
+    num = num + 10
+    print('número = ', num')
+    #input =  5 -> saída 15
+
+    9. Formatação de dados de saída
+    - print()
+    - format()
+        ex: print('{}:{}:{}'.format(hora, minutos, segundos))
+    - f-stings
+        ex: print(f'{hora}:{minutos}:{segundos}')
+    - Especificando a largura do campo
+        ex: print('{:4}, {:5}'.format(10, 100)
+    - Imprimir valores pontos flutuantes
+        ex: print('{:8.5}'.format(10/3))
+    - Imprimir sequência
+        ex: seq  = [0, 1, 2]
+        print(seq)
+    - Imprimir substring
+     ex: str = 'Hello World'
+     print(str[0:4]) -> saída: Hell
+     print(str[2:8]) -> saída: llo Wo
+     - Imprimir na sequência inversa
+     ex: str = 'Hello World'
+     print(str[::-1]) -> saída: dlroW olleH
+     print(str[8:2:-1]) -> saída: roW ol
+
+
