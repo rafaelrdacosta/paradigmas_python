@@ -257,3 +257,101 @@ parênteses contendo os parâmetros se houver.
     Ex:
     def diz_ola():
         print("Olá, Mundo!")
+
+6. Parâmetros, procedimentos e funções
+    a. Parâmetros
+
+        - Existem duas maneiras para uma função obter os dados:
+        -> Acessando variáveis globais
+        -> Por passagem de parâmetros quando chamada
+        Ex:
+        def calculaIMC(peso, altura):
+            return peso / (altura ** 2)
+        Você chama essa função passando valores específicos para esses parâmetros.
+        Que são os argumentos neste caso -> 70, 1.75
+        meu_IMC = calculaIMC(70, 1.75)
+            print(meu_IMC)
+
+        (1)) Parâmetros formais e reais
+        - Formais: são os definidos no cabeçalho da função.
+        Ex: peso, altura
+        - Reais (argumentos): são os valores que você passa para função.
+        Ex: 70, 1.75
+
+        (2) Valores padrão para parâmetros
+        - Você pode definir valores padrão para os parâmetros.
+        Ex:
+        def taximetro(distancia, multiplicador=1):
+        ...
+        return valor
+
+        pagamento = taximetro(3.5)
+
+        - o parâmetro multiplicador tem um valor padrão de 1.
+        - Isso significa que, se não passarmos um valor para multiplicador ao chamar a função, ele usará 1 como padrão.
+        - A palavra reservada return indica que a função retorna algum valor.
+        - O valor retornado tem que ser armazenado em uma variável -> pagamento.
+
+    c. Procedimentos e funções
+        - Procedimentos: não retornam valores.
+        - Funções: retornam valores.
+
+    d. Ambientes de referenciamento local
+        (1) Variáveis locais
+        - Definidas no escopo do subprograma.
+        - Tipos:
+        Dinâmicas da pilha: são vinculadas ao armazenamento no início
+    da execução do subprograma e desvinculada qando este termina.
+
+        Estática: são vinculadas a célula de memória antes do início do
+    programa e permanecem vinculadas a esta célula até o final do programa.
+
+        - Todas variáveis locais em Python são dinâmicas da pilha.
+        - Para explicitar em um subprograma que a variável é global
+    tem que usar a palavra reservada global.
+        Ex: global x
+
+    e. Subprogramas aninhados
+    - Em Python (e na maioria das linguagens funcionais),
+é permitido aninhar subprogramas.
+
+    f. Métodos de passagens de parâmetros
+        (1) Valor
+         - O parâmetro formal funciona como uma variável local do subprograma,
+sendo inicializado com o valor do parâmetro real.
+         - não ocorre uma alteração na variável externa ao subprograma
+caso ela seja passada como parâmetro.
+
+        (2) Referência
+        - Em vez de passar o valor do parâmetro real, é transmitido um caminho de acesso (normalmente,
+um endereço de memória) para o subprograma chamado.
+        - Ocorre alteração da variável externa ao subprograma.
+
+         (3) O método de passagem de parâmetros do Python é chamado de
+ passagem por atribuição.
+           - Como todos os valores de dados são objetos,
+ toda variável é uma referência para um objeto.
+           - podemos entender que a passagem por atribuição é uma passagem por referência,
+ pois os valores de todos os parâmetros reais são referências.
+
+ 7. Funções recursivas e docstrings
+    a. Recursividade
+    - a função recursiva é aquela que chama a si mesma.
+    Ex:
+    def regressiva(x):
+       print(x)
+       regressiva(x - 1)
+    - Porém deve ser definido uma condição de parada
+    Ex:
+    def regressiva(x):
+       if x <= 0:
+            print("Acabou")
+        else:
+            print(x)
+            regressiva(x-1)
+
+    b. Documentação de funções - Docstrings
+    - Em Python, é possível definir uma string que serve como documentação de
+funções definidas pelo desenvolvedor.
+    - Ao chamar o utilitário help() passando como parâmetro a função desejada,
+essa string é exibida.
