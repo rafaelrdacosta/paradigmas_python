@@ -113,4 +113,147 @@
             print(num)
     print('Laço encerrado')
 
-3. Tipos de dados sequenciais e dicionário
+4. Tipos de dados sequenciais e dicionário
+    a. Tipos sequenciais
+
+    1) Listas
+        a) São sequências mutáveis, normalmente armazena itens homogêneos
+        b) Lista vazia: []
+        c) Maneiras de criar listas:
+            (1) Usando colchetes e separa os itens por vírgulas: [a, b,c]
+            (2) List comprehension: [x for x in iterable]
+                Ex (ex055):
+                Com loop tradicional:
+                numeros = [1, 2, 3, 4]
+                dobro = []
+                for x in numeros:
+                    dobro.append(x * 2)
+
+                Com List Comprehension:
+                dobro = [x * 2 for x in numeros]
+
+                Adicionando filtros
+                Ex:
+                numeros = range(10)
+                pares = [x for x in numeros if x % 2 == 0]
+                # Resultado: [0, 2, 4, 6, 8]
+
+                Usando condicionais no valor
+                status = ["Par" if x % 2 == 0 else "Ímpar" for x in range(5)]
+                # Resultado: ['Par', 'Ímpar', 'Par', 'Ímpar', 'Par']
+
+            (3) list() ou list(iterable): usando o construtor do tipo list
+                - list() - criando uma lista vazia
+                Ex:
+                minha_lista = list()
+                print(minha_lista) #saída: []
+
+                - list(iterable): convertendo dados
+                    Quando você passa um iterável (qualquer objeto que você possa percorrer,
+            como strings, tuplas, conjuntos ou dicionários), o Python cria uma lista contendo
+            os elementos desse objeto.
+                    Ex:
+                    letras = list("Python")
+                    print(letras)  # Saída: ['P', 'y', 't', 'h', 'o', 'n']
+
+                    minha_tupla = (10, 20, 30)
+                    lista_nova = list(minha_tupla)
+                    lista_nova.append(40) # Agora é possível modificar
+
+                    meu_dict = {'a': 1, 'b': 2}
+                    chaves = list(meu_dict)
+                    print(chaves)  # Saída: ['a', 'b']
+
+    2) Tuplas
+        a) São sequências imutáveis, usada para armazenar itens heterogêneos.
+        b) Maneiras de criar uma tupla
+            (1) tupla vazia: ()
+            (2) separando os itens por vírgulas: a, b, c ou (a, b, c)
+            (3) tuple() ou tuple(iterable)
+                - método tuple(): criando uma tupla vazia
+                Ex:
+                vazia = tuple()
+                print(vazia)  # Saída: ()
+
+                - tuple(iterable): convertendo para imutável
+                minha_lista = [1, 2, 3]
+                minha_tupla = tuple(minha_lista)
+                # minha_tupla.append(4)  # Isso causaria um AttributeError
+
+                letras = tuple("Python")
+                print(letras)  # Saída: ('P', 'y', 't', 'h', 'o', 'n')
+
+        c) A Armadilha da Tupla de um Único Elemento
+
+        Ao usar literais, o Python pode se confundir. O construtor tuple()
+ajuda a evitar erros de sintaxe comuns.
+
+        O erro comum com literais:
+        x = (5)    # Isso é interpretado como um inteiro entre parênteses, não uma tupla!
+        y = (5,)   # O jeito correto de criar uma tupla de um item usando literais.
+
+        Usando o construtor com um iterável:
+        z = tuple([5]) # Cria corretamente a tupla (5,)
+
+    3) Objetos Range
+        a) representa uma sequência imutável de números.
+        b) usado frequentemente em loops com for.
+        c) pode ser chamado de maneira simples apenas com um argumento.
+            Ex: range(3) -> saída: 0, 1, 2
+            incrementa de zero até o limite do parâmetro exclusive
+        d) poder ser informado o início e fim como parâmetros
+            Ex: range(2, 7) -> saída: 2, 3, 4, 5, 6
+        e) pode ser passado o início, fim e passo
+            Ex: range(2, 9, 3) -> saída: 2, 5, 8
+
+    4) String (tipo especial)
+        a) é uma variável do tipo string: pode armazenar
+    letras, números, espaços, pontuaçao.
+        b) Tratamento de dados textuais
+        c) Indexação inicia em 0
+        d) Python permite indexação com valores negativos: -1 é o índice do último item
+        e) Delimitação de uma string:
+            aspas simples: 'string'
+            aspas duplas: "string"
+            aspas simples triplas: '''string'''
+            aspas duplas triplas: """string"""
+        f) Métodos para tratamento de string
+            - upper: maiúsculas
+            Ex: curso = 'Ensino a distância'
+                curso.upper() -> 'ENSINO A DISTÂNCIA'
+            - lower: minúsculas
+                curso.lower() -> 'ensino a distância'
+            - split: quebra a string em substrings (cria uma lista)
+                curso.split -> ['Ensino', 'a', 'Distância'
+
+    b. Operadores sequenciais comuns
+        - Permitem a manipulação de tipos sequenciais, inclusive strings.
+    Uso	           Resultado
+    x in s	       True se x for um subconjunto de s
+    x not in s	   False se x for um subconjunto de s
+    s + t	       Concatenação de s e t
+    n*s	           Concatenação de n cópias de s
+    s[i]	       Caractere de índice i em s
+    len(s)	       Comprimento de s
+    min(s)	       Menor item de s
+    max(s)	       Maior item de s
+
+    c. Dicionários
+    - Permitem que itens de uma sequência recebam índices definidos pelo usuário.
+    - Contém pares de chave e valor.
+    - Sintaxe:
+    {<chave 1>:<valor 1>, <chave 2>:<valor 2>, ..., <chave i>:<valor i>}
+
+    - Ex: Poderíamos criar um dicionário em que cada pessoa fosse representada pelo seu CPF,
+com nome e sobrenome. Para isso, teríamos o seguinte código:
+    pessoas = {'111222335-44':['Jod0','Silva'], '222333444-55':['Maria', 'Santos'], '353444555-66':
+['Jorge', 'Silva']}
+
+5. Subprogramas
+    - São blocos de código que realizam tarefas específicas dentro um programa maior.
+    - Em Python chamamos subprogramas de funções.
+    - Define-se uma função com a palavra def, seguida pelo nome da função e
+parênteses contendo os parâmetros se houver.
+    Ex:
+    def diz_ola():
+        print("Olá, Mundo!")
