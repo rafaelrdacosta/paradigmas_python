@@ -355,3 +355,34 @@ um endereço de memória) para o subprograma chamado.
 funções definidas pelo desenvolvedor.
     - Ao chamar o utilitário help() passando como parâmetro a função desejada,
 essa string é exibida.
+
+8. Importação de funções e módulos
+    - Fazer a importação do módulo desejado: import nome_modulo
+    - Chamar a função desejada: nome_modulo.nome_função(parâmetros)
+    - Exemplos:
+        1) math: operações matemáticas
+        - sqrt(x): raiz quadrada
+        - ceil(x): menor inteiro maior ou igual a x
+        - floor(x): maior inteiro menor ou igual a x
+        - cos(x): cosseno
+        - sin(x): seno
+        - log(x, b): logaritmo de x na base b
+        - pi: valor de pi
+        - e: valor de e
+
+        2) random: gerar números pseudoaleatórios
+        - random(): números de ponto flutuante no intervalo(00,0 e 1,0)
+        - uniform(a, b): número de ponto flutuante N tal que  a <= N <= b
+        - gauss(mu, sigma): distribuição gaussiana
+        - normalvariate(mu, sigma): distribuição gaussiana
+        - randrange(stop): elemento selecionado aleatório de range(0, stop)
+        - randrange(start, stop, step): elemento selecionado aleatório de range(start, stop, step)
+        - randint(a, b): número inteiro N tal que a <= N <= b
+        - choice(seq): elemnto aleatório de uma sequência
+        - shuffle(x[, random]): embaralha a sequência x no lugar
+        - sample(pop, k): sequência de tamanho K elementos escolhidos
+da população pop, sem repetição.
+
+        3) smtplib: envio de emails
+        4) time: implementar contadores temporais
+        5) tkinter: desenvolver interfaces gráficas
