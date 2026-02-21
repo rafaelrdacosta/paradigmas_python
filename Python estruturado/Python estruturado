@@ -406,3 +406,62 @@ enviar e-mail para qualquer máquina da internet com um serviço de processament
         5) tkinter: desenvolver interfaces gráficas
             O pacote tkinter é a interface Python padrão para o Tk GUI
 (interface gráfica com o usuário) toolkit.
+
+        - Pacotes externos
+            1) Python package index(PyPI): servidor onde são hospedados os pacotes externos criados pelos usuários.
+            2) o PyPI é acessado por meio do pip - gerenciador de pacotes do Python
+            3) Quando estiver trabalhando com pacotes externos é recomendando o uso de ambientes virturais (venv)
+            4) instalação de pacotes externos: pip install <nome_do_pacote>
+            5) Exemplos
+            Nome do módulo	   Pra que serve?
+            numpy	           Cálculos, operações matemáticas e simulações
+            pandas	           Manipulaçao de dados
+            scikit-learn	   Modelos de aprendizado de máquina
+            matplotlib	       Visualização de dados
+            requests	       Biblioteca de comandos de comunicação pelo protocolo HTTP
+            flask	           Construção de aplicações web
+
+9. Erros e exceções
+    a) Erros de sintaxe: formato incorreto de uma instrução
+    b) Erros em tempo de execução do programa: o programa entrou em um estado indevido.
+        Ex: divisão por zero, tentativa de acessar um índice indevido em uma lista.
+
+    c) Tipos de exceções
+    Exceção	Explicação
+    KeyboardInterrupt	Levantado quando o usuário pressiona CTRL+C, a combinação de interrupção.
+    OverflowError	    Levantado quando uma expressão de ponto flutuante é avaliada como um valor muito grande.
+    ZeroDivisionError	Levantado quando se tenta dividir por 0.
+    IOError	            Levantado quando uma operação de entrada/saída falha por um motivo relacionado a isso.
+    IndexError	        Levantado quando um índice sequencial está fora do intervalo de índices válidos.
+    NameError	        Levantado quando se tenta avaliar um identificador (nome) não atribuído.
+    TypeError	        Levantado quando uma operação da função é aplicada a um objeto do tipo errado.
+    ValueError	        Levantado quando a operação ou função tem um argumento com o tipo correto, mas valor incorreto.
+
+    d) Em python as exceções são OBJETOS
+    e) A classe Exception é derivada de BaseException, classe base de todas as classes de exceção.
+    f) Captura e manipulação de exceções:
+        1) Bloco Try: instruções normais do programa
+        2) Bloco Except: só será executado no cado do levantamento de alguma exceção
+        try:
+           Bloco 1
+        except:
+           Bloco 2
+        Instrução fora do try/except
+
+        3) Captura de exceções de um determinado tipo
+        try:
+            num = eval(input("Entre com um número inteiro: \n"))
+            print(num)
+        except NameError:
+            print("Entre com o valor numérico e não letras")
+
+        4) Captura de exceções de múltiplos tipos
+        Try:
+            num = eval(input("Entre com um número inteiro: \n"))
+            print(num)
+        except ValueError:
+            print("Mensagem 1")
+        except IndexError:
+            print("Mensagem 2")
+        except:
+            print("Mensagem 3")
