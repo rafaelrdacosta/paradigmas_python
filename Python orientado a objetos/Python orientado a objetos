@@ -1,0 +1,145 @@
+1. Orientação a objetos
+    a. Conceitos e pilares de programação orientada a objetos
+
+        1) Objetos: representação computacional de um elemento ou processo
+do mundo real, que possuem:
+            - Características: informações
+            - Operações (comportamentos) que alteram suas características.
+
+        2) Atributos (dados): propriedades que descrevem o objeto.
+            - Aos atributos são atribuídos valores.
+
+        3) Operações (métodos): é uma função ou transformação que pode ser aplicada a
+objetos ou dados pertencentes a um objeto.
+
+        4) Interface: conjunto de operações de um objeto que podem ser chamadas
+por outros objetos com objetivo de colaborarem entre si.
+
+        5) Classes: é como um molde que define atributos e métodos de seus objetos.
+Um objeto é uma instância de uma classe.
+
+    b. Conceito de Classe
+
+        - Descreve as características e os comportamentos de um conjunto de objetos.
+        - Cada objeto pertence a uma única classe.
+        - Os objetos são instânciados a partir de sua classe.
+        - Os objetos de uma classe compartilham um conjunto de operações que atuam
+sobre seus dados, alterando seu estado.
+
+    c. O conceito de encapsulamento
+
+        - Refere-se à ideia de ocultar a implementação interna de uma classe ou
+objeto e fornecer apenas uma interface para interagir com ele.
+        - Separação dos aspectos externos(operações) de um objeto acessíveis a
+outros objetos, além de seus detalhes internos de implementação.
+        - O encapsulamento é feito por meio do uso de modificadoes de acesso:
+            1) Public
+            2) Protected
+            3) Private
+        - Princípios do encapsulamento:
+            1) Privacidade de dados
+            2) Métodos acessores (Getters e Setters)
+            3) Ocultação da implementação
+            4) Facilidade de manutenção
+            5) Segurança e integridade de dados
+
+   d. O conceito de herança e polimorfismo
+
+        1) Herança
+        - Herança: permite que classes derivadas adquiram atributos e métodos de
+uma classe base.
+        - Uma classe herdeira recebe as características de outra classe para
+reimplementá-la ou especializá-la de maneira diferente da classe pai.
+        - Uma classe pode ser definida genericamente com uma superclasse(veículo)
+e, em seguida, especializada em classes específicas, subclasses(carro, moto, caminhão...)
+        - Herança simples: uma classe herda as características apenas de uma superclasse.
+        - Herança múltipla:  uma classe herda as características de duas ou mais superclasses.
+
+        2) Polimorfismo
+        - Polimorfismo: possibilita que objetos de diferentes classes sejam
+tratados de forma uniforme, adaptando comportamentos específicos.
+        - O polimorfismo permite que métodos com o mesmo nome funcionem de
+maneira diferente, dependendo do contexto.
+            Ex.: o método mover da superclasse Transporte será aplicado de forma diferente
+nas subclasses Aéreo e Terrestre.
+        - Tipos:
+            a. Polimorfismo de sobrecarga(overloading): funções ou métodos com mesmo
+nome, mas com diferentes assinaturas.
+            b. Polimorfismo de inclusão(subtyping): uma subclasse pode ser usada no
+lugar de uma superclasse. Herança de métodos definidos na superclasse pelas subclasses.
+
+2. Orientação a objetos na linguagem Python
+
+    a. Definição de classes
+        - é uma declaração de tipo que encapsula constantes, variáveis e métodos
+que realizam a manipulação dos valores dessas variáveis.
+        - Cada classe deve ser única e fazer parte de um único aquivo.py.
+        - Uma boa prática é o nome da classe ser igual ao nome do arquivo, e para classe
+ser feita em um arquivo.
+        - Ex (nome do arquivo conta.py):
+            class Conta:
+                pass
+        -> a classe é definida com a instução class <nome>:
+        -> a palavra reservada pass indica que a classe será definida posteriormente
+
+   b. Construtores e self
+        - Para se instanciar objetos é preciso criar os construtores da classe.
+        - A palavra reservada __init__() serve para inicialização de classes.
+        - Ex:
+            class Conta:
+                def __init__(self, numero, cpf, nomeTitular, saldo):
+                    self.numero = numero
+                    self.cpf = cpf
+                    self.nomeTitular = nomeTitular
+                    self.saldo = saldo
+
+        - O python contrói objetos em duas etapas. A primeira etapa é utilizada
+com a palavra reservada __new__, a qual, em seguida, executa o método __init__.
+        - O __new__ cria a instância e é utilizado para alterar as classes
+dinamicamente nos casos de sistemas que envolvem metaclasses e frameworks.
+        - No exemplo o objeto já foi instanciado implicitamente pelo __new__,
+o método __init__ recebe uma referência do objeto instanciado como self(primeiro
+parâmetro).
+        - O comando self.numero é uma indicação que o número é um atributo do
+objeto que é atribuído um valor 'numero'.
+        - Quando um script python é executado, a variável reservada
+NAME referente a ele tem valor igual a "__main__". Nesse caso, a condição do If
+a seguir será TRUE. Então o que está no corpo do If será executado. No caso,
+é um chamado ao método main do script.
+        - Cont Ex:
+        def main():
+            #Instanciando um objeto
+            c1 = Conta(1, 64194159349, 'Rafael', 1000)
+            print(f'Nome do titular da conta: {c1.nomeTitular}')
+            print(f'Número da conta: {c1.numero}')
+            print(f'CPF do titular da conta: {c1.cpf}')
+            print(f'Saldo da conta: {c1.saldo}')
+
+        if __name__ == "__main__":
+            main()
+
+    c. Métodos
+        - Toda classe precisa possuir um conjunto de métodos para manipular
+os atributos.
+        - Ex:
+        def depositar(self, valor):
+            self.saldo += valor
+        - Métodos com retorno
+            a. Em python não é obrigatório haver um comando quando o método
+deve ser finalizado, porém é comum, retornar um valor a partir da análise do
+objeto:
+            Ex:
+            def sacar(self,valor):
+                if self.saldo < valor:
+                    return False
+                else:
+                    self.saldo -= valor
+                    return True
+
+    d. Referências entre objetos na memória
+        - Uma classe pode ter mais de uma ou várias instâncias de objetos na
+memória.
+        - Ex:
+        from Conta import Conta
+        conta1 = Conta(1, 123, “Joao”,0)
+        conta2 = Conta(3, 456, “Maria”,0)

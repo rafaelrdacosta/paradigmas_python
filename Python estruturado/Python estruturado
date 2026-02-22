@@ -404,8 +404,25 @@ enviar e-mail para qualquer máquina da internet com um serviço de processament
             sleep(segundos)	 A função suspende a execução por determinado número de segundos.
 
         5) tkinter: desenvolver interfaces gráficas
-            O pacote tkinter é a interface Python padrão para o Tk GUI
+            - O pacote tkinter é a interface Python padrão para o Tk GUI
 (interface gráfica com o usuário) toolkit.
+
+            - Tratamento de eventos no Tkinter
+                Evento               Descrição
+
+               <Button-1>            Clique com o botão esquerdo do mouse.
+
+               <Button-3>            Clique com o botão direito do mouse.
+
+               <Double-Button-1>     Clique duplo com o botão esquerdo.
+
+               <Enter>               O cursor do mouse entrou na área do widget.
+
+               <Leave>               O cursor do mouse saiu da área do widget.
+
+               <Key>                 Qualquer tecla pressionada (use event.char para saber qual).
+
+               <Return>              A tecla "Enter" foi pressionada.
 
         - Pacotes externos
             1) Python package index(PyPI): servidor onde são hospedados os pacotes externos criados pelos usuários.
@@ -465,3 +482,21 @@ enviar e-mail para qualquer máquina da internet com um serviço de processament
             print("Mensagem 2")
         except:
             print("Mensagem 3")
+
+10. Gerar um programa Executável
+    - pip install pyinstaller (dentro do projeto)
+    - Ainda no terminal, dentro da pasta do seu projeto, execute:
+
+        pyinstaller --noconsole --onefile seu_arquivo.py
+
+        --noconsole: Oculta a janela do terminal (ideal para apps Tkinter).
+
+        --onefile: Compacta tudo em um único arquivo .exe.
+
+    - Localizar o arquivo
+
+        Após o processo terminar, uma pasta chamada dist será criada.
+
+        Dentro dela estará o seu seu_arquivo.exe.
+
+        Agora basta clicar com o botão direito nele e selecionar Fixar na barra de tarefas ou Criar atalho.
