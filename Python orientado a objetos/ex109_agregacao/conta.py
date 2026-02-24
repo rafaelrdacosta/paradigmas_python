@@ -23,4 +23,4 @@ class Conta:
             return('Transferência realizada com sucesso.')
 
     def gerarsaldo(self):
-        print(f"Número da conta:{self.numero}\nSaldo atual: {self.saldo}")
+        print(f"Número da conta:{self.numero} Saldo atual: {self.saldo}")

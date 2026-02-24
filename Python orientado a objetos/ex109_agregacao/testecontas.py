@@ -1,3 +1,4 @@
+#Realizando a agregação
 from conta import Conta
 from cliente import Cliente
 
@@ -9,5 +10,6 @@ conta1 = Conta([cliente1, cliente2], 1, 0)
 
 conta1.gerarsaldo()
 conta1.depositar(1500)
+conta1.gerarsaldo()
 conta1.sacar(500)
 conta1.gerarsaldo()
