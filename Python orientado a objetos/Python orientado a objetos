@@ -164,3 +164,54 @@ atributos.
 uma relação forte onde o ciclo de vida do objeto componente depende do objeto composto.
         - Se o objeto composto for destruído, os objetos componentes também serão
 destruídos, como no caso de um carro e seu motor, onde o motor não existe sem o carro.
+
+    e. Integridade dos objetos: encapsulamento
+        - Encapsulamento: visa proteger os dados de uma classe e expor apenas o necessário.
+        - Modificadores de acesso: públicos, protegidos e privados.
+        - Para tornar um objeto privado é preciso iniciá-lo com dois underscores __
+        Ex self.__numero = numero
+
+        1) Decorator @property
+            - As properties são uma estratégia importante disponibilizada pelo Python
+para acessar e modificar atributos de forma controlada.
+            - Ao usar o decorador @property em métodos, você mantém os atributos
+como protegidos, permitindo que sejam acessados apenas por meio desses métodos.
+            - Quando você deseja permitir que o atributo seja modificaro pode utilizar
+o decorador @<nomedometodo>.setter.
+
+        2) Atributos de classe
+           Ex:
+           class Circulo():
+                #Atributo de Classe
+                total_circulos = 0
+
+                def __init__(self, pontox, pontoy, raio):
+                    self.pontox = pontox
+                    self.pontoy = pontoy
+                    self.raio = raio
+                    Circulo.total_circulos += 1
+
+        - a variável de classe deveria ser marcada como privada, usando um underscore (_) antes do seu nome.
+        _total_circulos
+
+        3) Métodos de classe
+        - Para definir um método como estático, deve-se usar o decorator @classmethod.
+
+        4) Métodos públicos e privados
+        - o método pode ser declarado como privado, mesmo que ainda possa ser chamado
+diretamente como se fosse um método público
+
+        5) Métodos estáticos
+        - São métodos que podem ser chamados sem haver uma referência para um
+objeto da classe, ou seja, não existe a obrigatoriedade da instanciação de um
+objeto da classe. O método pode ser chamado diretamente.
+        Ex:
+        import math
+        class Math:
+
+            @staticmethod
+            def sqrt(x):
+                return math.sqrt(x)
+
+        Math.sqrt(20)
+        Aqui, o método sqrt da classe Math foi chamado sem que um objeto da classe Math fosse instanciado.
