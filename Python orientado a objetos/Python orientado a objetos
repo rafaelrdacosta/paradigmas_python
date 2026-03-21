@@ -144,7 +144,7 @@ memória.
         conta1 = Conta(1, 123, “Joao”,0)
         conta2 = Conta(3, 456, “Maria”,0)
 
-    d. Tipos de associação entre objetos
+    e. Tipos de associação entre objetos
         1) Agregação
         - Uma relação em que uma classe contém outra sem posse total,
 permitindo independência.
@@ -165,7 +165,7 @@ uma relação forte onde o ciclo de vida do objeto componente depende do objeto 
         - Se o objeto composto for destruído, os objetos componentes também serão
 destruídos, como no caso de um carro e seu motor, onde o motor não existe sem o carro.
 
-    e. Integridade dos objetos: encapsulamento
+    f. Integridade dos objetos: encapsulamento
         - Encapsulamento: visa proteger os dados de uma classe e expor apenas o necessário.
         - Modificadores de acesso: públicos, protegidos e privados.
         - Para tornar um objeto privado é preciso iniciá-lo com dois underscores __
@@ -215,3 +215,52 @@ objeto da classe. O método pode ser chamado diretamente.
 
         Math.sqrt(20)
         Aqui, o método sqrt da classe Math foi chamado sem que um objeto da classe Math fosse instanciado.
+
+    g. Herança
+        - Uma classe(filha) herda características e comportamentos de outra(pai).
+        - Uma classe derivada que herda atributos e métodos de uma classe base.
+        - Herança múltipla: permite uma classe herdar o código de duas ou mais superclasse.
+           1) Para que a classe filha herde e inicialize os atributos da classe pai, utilizamos a função super().
+        Ela retorna um objeto temporário da superclasse, permitindo chamar seus métodos.
+           2) Deve ser chamado o construtor explicitamente das superclasses
+            com o seguinte formato: nomeclasse.__init__(construtores).
+
+    h. Polimorfismo
+        - permite que objetos de diferentes classes sejam tratados através de uma interface comum.
+
+    i. Classe Abstrata
+        - fornecem estrutura para outras classes, definindo métodos que
+    devem ser implementados pelas subclasses.
+        - uma classe abstrata não pode ser instaciada durante a execução de um programa.
+        - O python utiliza o módulo chamado abc para definir uma classe abstrata, que será
+    herdeira da superclasse ABC(Abstract Base Classes).
+        from abc import ABC
+        class ContaCliente(ABC):
+
+        - Para uma classe ser considerada abstrata ela precisa de pelo menos um
+    método abstrato.
+
+        class ContaCliente(ABC):
+            ...
+            @abstractmethod
+            def calculo_rendimento(self):
+                pass
+
+    j. Tratamento de exceções
+        - Exceções personalizadas:
+        class ExcecaoCustomizada(Exception):
+            pass
+
+        - Lançando exceções
+            Uma vez que uma exceção personalizada tenha sido criada,
+        ela pode ser lançada em situações específicas, usando a instrução raise.
+
+            def checa_valor(valor):
+                if valor < 0:
+                    raise ExcecaoCustomizada("Valor não pode ser negativo!")
+
+        - Try Except
+            try:
+                checa_valor(-10)
+            except ExcecaoCustomizada as ex:
+                print(f"Exceção lançada: {ex}")
